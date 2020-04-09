@@ -1,0 +1,12 @@
+package com.testeCielo.entrypoint;
+
+import java.util.List;
+
+import com.testeCielo.entrypoint.dto.response.LancamentoExtratoResponse;
+
+public interface LancamentoController {
+
+	
+	public List<LancamentoExtratoResponse> retiraExtrato (LancamentoExtratoResponse lancamento);
+	
+}

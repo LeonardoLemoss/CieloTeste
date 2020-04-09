@@ -1,0 +1,15 @@
+package com.testeCielo.entrypoint.dto.response;
+
+import java.util.Date;
+
+public class LancamentoExtratoResponse {
+	
+	//Data do lançamento | Descrição | Número | Situação | Data de confirmação | Dados bancários | Valor final
+	
+	private Date dataLançamento;
+	private String descricao;
+	private Long numero;
+	private Date dataConfirmacao;
+	private String dadosBancario;
+
+}

@@ -1,0 +1,5 @@
+package com.testeCielo.entrypoint.impl;
+
+public class LancamentoControllerImpl {
+
+}
