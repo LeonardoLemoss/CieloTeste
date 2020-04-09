@@ -20,13 +20,13 @@ public class LancamentoConverterHttp {
 			return null;
 		}
 		
-		List<LancamentoExtratoResponse> listaExtratoController = new ArrayList<>();
+		List<LancamentoExtratoResponse> listaExtrato = new ArrayList<>();
 		
 		listaLancamento.forEach(
-				l -> listaExtratoController.add(ToExtratoController(l)) );
+				l -> listaExtrato.add(ToExtratoController(l)) );
 		
 		
-		return listaExtratoController;
+		return null;
 	}
 
 	private LancamentoExtratoResponse ToExtratoController(LancamentoExtratoOutput l) {
@@ -35,13 +35,8 @@ public class LancamentoConverterHttp {
 			return null;
 		}
 		
-		return LancamentoExtratoResponse.builder()										
-				.descricao(l.getDescricao())
-				.numero(l.getNumero())
-				.dataConfirmacao(l.getDataConfirmacao())
-				.dadosBancario(l.getDadosBancario())
-				.valorFinal(l.getValorFinal())
-				.build();
+		
+		return null;
 	}
 
 }
