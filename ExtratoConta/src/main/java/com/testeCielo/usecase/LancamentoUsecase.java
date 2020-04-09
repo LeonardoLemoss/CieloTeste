@@ -1,5 +1,5 @@
 package com.testeCielo.usecase;
 
-public class LancamentoUsecase {
+public interface LancamentoUsecase {
 
 }

@@ -1,0 +1,12 @@
+package com.testeCielo.gateway.dto.response;
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class LancamentoExtratoResponseIntegration {
+
+	@JsonProperty(value = "totalControleLancamento")
+	private LancamentoResponseIntegration totaldeLancamento;
+	private List<LancamentosResponseIntegration> lancamentos;
+}

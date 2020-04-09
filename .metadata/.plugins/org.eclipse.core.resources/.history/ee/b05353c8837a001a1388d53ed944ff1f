@@ -1,0 +1,17 @@
+package com.testeCielo.gateway.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DadosBancarioResponseIntegration {
+	
+	@JsonProperty(value = "codigoBanco")
+	private int codigo;
+	
+	@JsonProperty(value = "numeroAgencia")
+	private int agencia;
+	
+	@JsonProperty(value = "numeroContaCorrente")
+	private long numeroContaCorrente;
+
+
+}
