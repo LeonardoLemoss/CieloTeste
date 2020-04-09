@@ -1,0 +1,17 @@
+package com.testeCielo.usecase.impl;
+
+import java.util.List;
+
+import com.testeCielo.entrypoint.dto.response.LancamentoExtratoResponse;
+import com.testeCielo.usecase.LancamentoUsecase;
+import com.testeCielo.usecase.dto.response.LancamentoExtratoOutput;
+
+public class LancamentoUsecaseImpl implements LancamentoUsecase{
+
+	@Override
+	public List<LancamentoExtratoOutput> retirarExtrato() {
+		return null;
+	}
+
+
+}

@@ -13,6 +13,6 @@ import com.testeCielo.entrypoint.dto.response.LancamentoExtratoResponse;
 public interface LancamentoController {
 	
 	@GetMapping(value = "/extrato")
-	public List<LancamentoExtratoResponse> retiraExtrato (LancamentoExtratoResponse lancamento);
+	public List<LancamentoExtratoResponse> retiraExtrato();
 	
 }

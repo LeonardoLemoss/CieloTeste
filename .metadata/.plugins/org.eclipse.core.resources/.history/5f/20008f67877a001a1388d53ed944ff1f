@@ -1,0 +1,10 @@
+package com.testeCielo.usecase;
+
+import java.util.List;
+
+import com.testeCielo.entrypoint.dto.response.LancamentoExtratoResponse;
+
+public interface LancamentoUsecase {
+
+
+}

@@ -1,0 +1,26 @@
+package com.testeCielo.entrypoint.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.testeCielo.entrypoint.LancamentoController;
+import com.testeCielo.entrypoint.dto.response.LancamentoExtratoResponse;
+import com.testeCielo.usecase.LancamentoUsecase;
+
+public class LancamentoControllerImpl implements LancamentoController{
+
+	@Autowired
+	private LancamentoUsecase usecase; 
+	
+	@Override
+	public List<LancamentoExtratoResponse> retiraExtrato() {
+		
+		List<LancamentoExtratoResponse> listaLancamento = 
+				usecase.retirarExtrato();
+		
+		
+		return null;
+	}
+
+}

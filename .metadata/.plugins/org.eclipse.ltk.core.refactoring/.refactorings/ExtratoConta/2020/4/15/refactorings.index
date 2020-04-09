@@ -3,3 +3,9 @@
 1586448831220	Rename type 'lancamentoContaCorrenteClienteResponseIntegration'
 1586448841618	Rename type 'LancamentoExtratoResponseIntegration'
 1586451922014	Delete element
+1586453157654	Copy package
+1586453176234	Delete element
+1586453190919	Copy compilation units
+1586453211499	Rename type 'DadosBancarioResponse'
+1586453224827	Rename type 'LancamentoExtratoResponse'
+1586453668312	Rename type 'LancamentoUsecase'
