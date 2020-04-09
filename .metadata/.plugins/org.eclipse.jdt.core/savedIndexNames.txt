@@ -90,7 +90,6 @@ INDEX VERSION 1.131+C:\Users\leoo_\OneDrive\Documentos\ProjetoCielo\.metadata\.p
 1667081303.index
 1754956247.index
 1690011527.index
-3824112295.index
 3958563617.index
 621085392.index
 2167906511.index

@@ -9,3 +9,6 @@
 1586453211499	Rename type 'DadosBancarioResponse'
 1586453224827	Rename type 'LancamentoExtratoResponse'
 1586453668312	Rename type 'LancamentoUsecase'
+1586454118287	Rename type 'LancamentoConverter'
+1586454238631	Rename type 'ResponseIntegration'
+1586454254952	Rename type 'LancamentoContaCorrenteClienteIntegration'
