@@ -1,0 +1,48 @@
+package com.testeCielo.gateway.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.testeCielo.gateway.LancamentoGateWay;
+import com.testeCielo.gateway.dto.response.ContaCorrenteClienteResponseIntegration;
+import com.testeCielo.gateway.dto.response.ExtratoResponseIntegration;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
+
+@Service
+public class LancamentoGateWayImpl implements LancamentoGateWay{
+
+	@Autowired
+	RestTemplate restTemplate;
+	
+	//Como n tenho uma Url para realizar a integracao, vou mockar o que seria o retorno do legado.... 
+	public LancamentosResponseIntegration extratoGateway() {
+		return LancamentosResponseIntegration.builder()
+				.efetivaLancamento("03/06/2016")
+				.lancamentosCliente(new ContaCorrenteClienteResponseIntegration().builder()
+						.numeroRemessaBanco("64320236054").situacao("Pago").operacao("regular").build())
+				.contaCorrenteCliente("03/06/2016")
+				.banco("BANCO ABCD S.A.")
+				.valorRemessa(11499.01)
+				.build();
+	}
+
+	
+	//fazendo um metodo como se fosse realizar integracao com servico legado
+	public ExtratoResponseIntegration extratoGatewayIntegracao() throws Exception {
+		
+		try {
+			ExtratoResponseIntegration extratoResponseIntegration = 
+					restTemplate.getForObject("http://localhost:8080/legado/extradoDeConta/exemplo"
+		                    , ExtratoResponseIntegration.class);
+					
+			return extratoResponseIntegration;
+			
+		} catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}
+		
+	}
+		
+
+}

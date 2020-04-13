@@ -1,0 +1,17 @@
+package com.testeCielo.gateway.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.testeCielo.gateway.LancamentoGateWay;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
+
+public class LancamentoGateWayImpl implements LancamentoGateWay{
+
+	@Override
+	public List<LancamentosResponseIntegration> lancarExtrato() {
+		return null;
+	}
+
+
+}

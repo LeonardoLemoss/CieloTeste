@@ -1,9 +1,9 @@
 package com.testeCielo.gateway;
 
-import com.testeCielo.gateway.dto.response.ExtratoResponseIntegration;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
 
 public interface LancamentoGateWay {
 
-	ExtratoResponseIntegration lancarExtrato();
+	LancamentosResponseIntegration extratoGateway();
 
 }

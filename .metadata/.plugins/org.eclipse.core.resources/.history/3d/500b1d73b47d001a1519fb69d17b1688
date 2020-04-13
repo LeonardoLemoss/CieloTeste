@@ -1,0 +1,30 @@
+package com.testeCielo.gateway.impl;
+
+import org.springframework.stereotype.Component;
+
+import com.testeCielo.gateway.LancamentoGateWay;
+import com.testeCielo.gateway.dto.response.ContaCorrenteClienteResponseIntegration;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
+
+@Component
+public class LancamentoGateWayImpl implements LancamentoGateWay{
+
+	public LancamentosResponseIntegration extratoGateway() {
+		return LancamentosResponseIntegration.builder()
+				.efetivaLancamento("03/06/2016")
+				.lancamentosCliente(new ContaCorrenteClienteResponseIntegration().builder()
+						.numeroRemessaBanco("64320236054").situacao("Pago").operacao("regular").build())
+				.contaCorrenteCliente("03/06/2016")
+				.banco("BANCO ABCD S.A.")
+				.valorRemessa(11499.01)
+				.build();
+	}
+
+	
+	//fazendo um metodo como se fosse realizar integracao com servico legado
+	
+	
+	
+	
+
+}

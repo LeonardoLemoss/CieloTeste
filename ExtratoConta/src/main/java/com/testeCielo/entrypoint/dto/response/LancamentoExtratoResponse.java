@@ -1,8 +1,5 @@
 package com.testeCielo.entrypoint.dto.response;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,11 +11,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LancamentoExtratoResponse {
 	
-	private Date dataLançamento;
+	private String dataLançamento;
 	private String descricao;
-	private Long numero;
-	private Date dataConfirmacao;
+	private String situacao;
+	private String numero;
+	private String dataConfirmacao;
 	private String dadosBancario;
-	private BigDecimal valorFinal;
+	private Double valorFinal;
 
 }

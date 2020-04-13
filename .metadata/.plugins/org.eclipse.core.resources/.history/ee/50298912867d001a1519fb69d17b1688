@@ -1,0 +1,34 @@
+package com.testeCielo.gateway.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class DadosBancarioResponseIntegration {
+	
+	@JsonProperty(value = "codigoBanco")
+	private int codigo;
+	
+	@JsonProperty(value = "numeroAgencia")
+	private int agencia;
+	
+	@JsonProperty(value = "numeroContaCorrente")
+	private long numeroContaCorrente;
+	
+	public String getDadosBancarios(int codigo,int agencia,long numeroContaCorrente, String Dados) {       
+		
+		this.codigo = codigo;
+        this.agencia = agencia;
+        this.numeroContaCorrente = numeroContaCorrente;
+        
+        return Dados; 
+    }
+	
+}

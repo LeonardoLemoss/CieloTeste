@@ -1,6 +1,5 @@
 package com.testeCielo.gateway.dto.response;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -20,10 +19,10 @@ public class LancamentosResponseIntegration {
 	private ContaCorrenteClienteResponseIntegration lancamentosCliente;
 	
 	@JsonProperty(value = "dataEfetivaLancamento")
-	private Date efetivaLancamento;
+	private String efetivaLancamento;
 	
 	@JsonProperty(value = "dataLancamentoContaCorrenteCliente")
-	private Date contaCorrenteCliente;
+	private String contaCorrenteCliente;
 	
 	@JsonProperty(value = "numeroEvento")
 	private long numeroEvento;
@@ -47,7 +46,7 @@ public class LancamentosResponseIntegration {
 	private long sufixoCnpj;
 	
 	@JsonProperty(value = "valorLancamentoRemessa")
-	private BigDecimal valorRemessa;
+	private Double valorRemessa;
 	
 	@JsonProperty(value = "dateLancamentoContaCorrenteCliente")
 	private Date contaCorrenteClienteCodigo;

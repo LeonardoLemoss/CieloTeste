@@ -1,0 +1,25 @@
+package com.testeCielo.usecase.converter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.testeCielo.gateway.dto.response.ExtratoResponseIntegration;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
+import com.testeCielo.usecase.dto.response.LancamentoExtratoOutput;
+
+public class LancamentoUsecaseConverter {
+
+	public List<LancamentoExtratoOutput> ParaLancamentoExtratoUsecase(List<LancamentosResponseIntegration> extratoIntegration) {
+		
+		 List<LancamentoExtratoOutput> listaLancamentosExtrado = new ArrayList<>();
+		
+		extratoIntegration.forEach(e ->
+										listaLancamentosExtrado.add(ParaExtratoUseCaseConverter(e)));
+		return null;
+	}
+
+	private LancamentoExtratoOutput ParaExtratoUseCaseConverter(LancamentosResponseIntegration e) {
+		return null;
+	}
+
+}

@@ -1,8 +1,8 @@
 package com.testeCielo.entrypoint.impl;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.testeCielo.entrypoint.LancamentoController;
 import com.testeCielo.entrypoint.converter.LancamentoConverterHttp;
@@ -10,6 +10,8 @@ import com.testeCielo.entrypoint.dto.response.LancamentoExtratoResponse;
 import com.testeCielo.usecase.LancamentoUsecase;
 import com.testeCielo.usecase.dto.response.LancamentoExtratoOutput;
 
+
+@RestController
 public class LancamentoControllerImpl implements LancamentoController{
 
 	@Autowired
@@ -18,16 +20,16 @@ public class LancamentoControllerImpl implements LancamentoController{
 	@Autowired
 	private LancamentoConverterHttp converter;
 	
-	@Override
-	public List<LancamentoExtratoResponse> retiraExtrato() {
+	@GetMapping(value = "/lancamento/extrato")
+	public LancamentoExtratoResponse retiraExtrato() {
 		
-		List<LancamentoExtratoOutput> listaLancamento = 
+		LancamentoExtratoOutput extrato = 
 				usecase.retirarExtrato();
 		
-		List<LancamentoExtratoResponse> listaLancamentoController =
-				converter.ParaLancamentoExtratoController(listaLancamento);
+		LancamentoExtratoResponse LancamentoController =
+				converter.ParaLancamentoExtratoController(extrato);
 		
-		return listaLancamentoController;
+		return LancamentoController;
 	}
 
 }

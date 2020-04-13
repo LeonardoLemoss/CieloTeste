@@ -1,15 +1,16 @@
 package com.testeCielo.usecase.impl;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.testeCielo.gateway.LancamentoGateWay;
-import com.testeCielo.gateway.dto.response.ExtratoResponseIntegration;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
 import com.testeCielo.usecase.LancamentoUsecase;
 import com.testeCielo.usecase.converter.LancamentoUsecaseConverter;
 import com.testeCielo.usecase.dto.response.LancamentoExtratoOutput;
 
+@Service
 public class LancamentoUsecaseImpl implements LancamentoUsecase{
 
 	@Autowired
@@ -19,15 +20,15 @@ public class LancamentoUsecaseImpl implements LancamentoUsecase{
 	private LancamentoUsecaseConverter converter;
 	
 	@Override
-	public List<LancamentoExtratoOutput> retirarExtrato() {
+	public LancamentoExtratoOutput retirarExtrato() {
 		
-		ExtratoResponseIntegration extratoIntegration =
-				gateway.lancarExtrato();
+		LancamentosResponseIntegration extratoIntegration =
+				gateway.extratoGateway();
 		
-		List<LancamentoExtratoOutput> listaLancamento =
+		LancamentoExtratoOutput Lancamento =
 				converter.ParaLancamentoExtratoUsecase(extratoIntegration);
 				
-		return listaLancamento;
+		return Lancamento;
 	}
 
 

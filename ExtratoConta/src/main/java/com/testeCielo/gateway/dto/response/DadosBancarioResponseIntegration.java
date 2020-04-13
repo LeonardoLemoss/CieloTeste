@@ -21,5 +21,7 @@ public class DadosBancarioResponseIntegration {
 	
 	@JsonProperty(value = "numeroContaCorrente")
 	private long numeroContaCorrente;
+	
 
+	
 }

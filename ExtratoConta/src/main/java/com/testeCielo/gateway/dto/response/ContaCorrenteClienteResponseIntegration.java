@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class ContaCorrenteClienteResponseIntegration {
 	
 	@JsonProperty(value = "numeroRemessaBanco")
-	private long numeroRemessaBanco;
+	private String numeroRemessaBanco;
 	
 	@JsonProperty(value = "nomeSituacaoRemessa")
 	private String situacao;

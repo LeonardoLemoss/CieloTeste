@@ -1,0 +1,32 @@
+package com.testeCielo.gateway.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.testeCielo.gateway.LancamentoGateWay;
+import com.testeCielo.gateway.dto.response.ContaCorrenteClienteResponseIntegration;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
+
+public class LancamentoGateWayImpl implements LancamentoGateWay{
+
+	@Override
+	public List<LancamentosResponseIntegration> lancarExtrato() {
+		
+		List<LancamentosResponseIntegration> extratoslist = new ArrayList<>();
+		
+		extratoslist.forEach(e-> extratoslist.add(ParaExtratoGatewayConverter(e)));
+		
+		
+		return extratoslist;
+	}
+
+	private LancamentosResponseIntegration ParaExtratoGatewayConverter(LancamentosResponseIntegration e) {
+		return LancamentosResponseIntegration.builder()
+				.lancamentosCliente(new ContaCorrenteClienteResponseIntegration().builder()
+						.numeroRemessaBanco(64320236054).situacao("Pago").operacao("regular").build())
+				
+				.build();
+	}
+
+
+}

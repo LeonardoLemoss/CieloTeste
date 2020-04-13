@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonProperty"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="lombok.Builder"/>
+<fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+<fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+<fullyQualifiedTypeName name="com.testeCielo.usecase.LancamentoUsecase"/>
+<fullyQualifiedTypeName name="com.testeCielo.usecase.dto.response.LancamentoExtratoOutput"/>
+<fullyQualifiedTypeName name="com.testeCielo.entrypoint.converter.LancamentoConverter"/>
+<fullyQualifiedTypeName name="com.testeCielo.gateway.dto.response.ExtratoResponseIntegration"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.testeCielo.usecase.converter.LancamentoUsecaseConverter"/>
+<fullyQualifiedTypeName name="com.testeCielo.gateway.LancamentoGateWay"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

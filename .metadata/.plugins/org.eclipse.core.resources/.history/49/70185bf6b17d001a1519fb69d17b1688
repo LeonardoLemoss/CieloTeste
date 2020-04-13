@@ -1,0 +1,36 @@
+package com.testeCielo.usecase.converter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.testeCielo.gateway.dto.response.ExtratoResponseIntegration;
+import com.testeCielo.gateway.dto.response.LancamentosResponseIntegration;
+import com.testeCielo.usecase.dto.response.LancamentoExtratoOutput;
+
+@Component
+public class LancamentoUsecaseConverter {
+
+	public List<LancamentoExtratoOutput> ParaLancamentoExtratoUsecase(List<LancamentosResponseIntegration> extratoIntegration) {
+		
+		 List<LancamentoExtratoOutput> listaLancamentosExtrado = new ArrayList<>();
+		
+		extratoIntegration.forEach(e ->
+										listaLancamentosExtrado.add(ParaExtratoUseCaseConverter(e)));
+		return listaLancamentosExtrado;
+	}
+
+	private LancamentoExtratoOutput ParaExtratoUseCaseConverter(LancamentosResponseIntegration e) {
+		return LancamentoExtratoOutput.builder()
+				.dataLançamento(e.getEfetivaLancamento())
+				.descricao(e.getLancamentosCliente().getOperacao())
+				.numero(e.getLancamentosCliente().getNumeroRemessaBanco())
+				.situacao(e.getLancamentosCliente().getSituacao())
+				.dadosBancario(e.getBanco())
+				.dataConfirmacao(e.getContaCorrenteCliente())
+				.valorFinal(e.getValorRemessa())
+				.build();
+	}
+
+}
