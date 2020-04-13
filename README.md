@@ -26,17 +26,17 @@ Criar projeto Java com API para Extrato de Lançamentos em conta.
                 
                 
                 
-        Como nao foi passado de fato uma Url de servico para ser consultada, iriei mockar a integracao do servico, 
+        Como nao foi passado de fato uma Url de servico para ser consultada, irei mockar a integracao do servico, 
         assim os dados desse "sistema legado" serao apresentados normalmente, 
         mesmo assim vou construir o RestTemplate como se fosse fazer de fato a integracao com esse sistema, porem o metodo
         que vou usar vai ser o do mock.
         
-        
                 
+     --------------------------------------------------------------------------------------------------------------------------- 
                 
-                
-                
-                
+       Segue o url do endpoint:         
+                http://localhost:8080/lancamento/extrato
+              
                 
                 
                 
