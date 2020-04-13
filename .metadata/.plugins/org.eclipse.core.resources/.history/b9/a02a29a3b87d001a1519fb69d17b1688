@@ -1,0 +1,13 @@
+package com.testeCielo.entrypoint;
+
+import com.testeCielo.entrypoint.dto.response.LancamentoExtratoResponse;
+
+import io.swagger.annotations.Api;
+
+
+@Api(value="Extrato")
+public interface LancamentoController {
+	
+	public LancamentoExtratoResponse retiraExtrato();
+	
+}

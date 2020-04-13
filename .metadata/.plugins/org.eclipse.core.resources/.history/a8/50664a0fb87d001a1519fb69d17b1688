@@ -1,0 +1,5 @@
+package com.testeCielo.config;
+
+public class SwaggerConfig {
+
+}
