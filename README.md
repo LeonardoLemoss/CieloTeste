@@ -36,8 +36,12 @@ Criar projeto Java com API para Extrato de Lançamentos em conta.
                 
        Segue o url do endpoint:         
                 http://localhost:8080/lancamento/extrato
-              
                 
+     ---------------------------------------------------------------------------------------------------------------------------
+      
+      Fiz um swagger de boas praticas tambem...
+      http://localhost:8080/swagger-ui.html#/
+      
                 
                 
                 
