@@ -1,6 +1,7 @@
 # CieloTeste
 Criar projeto Java com API para Extrato de Lançamentos em conta.
 
+DETALHE: o projeto ta rodando com Lombok.
 
         Projeto separado por 3 camadas principais:  EntryPoint / UseCase / Gateway.
         - seguindo arquiteruta de onion architecture, achei interessante implementar algo diferente em cima do projeto.
