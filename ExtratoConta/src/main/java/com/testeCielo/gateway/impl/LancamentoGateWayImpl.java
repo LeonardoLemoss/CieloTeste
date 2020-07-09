@@ -29,7 +29,6 @@ public class LancamentoGateWayImpl implements LancamentoGateWay{
 				.valorRemessa(11499.01)
 				.build();
 	}
-
 	
 	//fazendo um metodo como se fosse realizar integracao com servico legado
 	public ExtratoResponseIntegration extratoGatewayIntegracao() throws Exception {

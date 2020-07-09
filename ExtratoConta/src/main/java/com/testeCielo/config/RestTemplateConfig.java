@@ -7,6 +7,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import lombok.RequiredArgsConstructor;
 
+//classe de config do rest
 @Configuration
 @RequiredArgsConstructor
 public class RestTemplateConfig {
